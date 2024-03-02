@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="João Pedro Curityba" />
+    <meta name="description" content="Conversor Dólar/Real" />
+    <meta
+      name="keywords"
+      content="conversor, dólar, real, converter moedas, converter dólar, conversor de dólar"
+    />
+
+    <title>Conversor</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Conversor</h1>
+
+    <div id="cotacao"></div>
+
+    <div id="form">
+      <label for="moeda">Converter de:</label>
+      <select id="moeda">
+        <option value="USD-BRL">Dólar -> Real</option>
+        <option value="BRL-USD">Real -> Dólar</option>
+      </select>
+
+      <label for="valor">Quanto deseja converter?</label>
+      <input
+        type="number"
+        id="valor"
+        placeholder="Digite um valor"
+        oninput="script: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength="13"
+      />
+
+      <button onclick="converter()">Converter</button>
+    </div>
+
+    <div id="output">
+      <h2><mark>Resultado:</mark></h2>
+    </div>
+
+    <script src="./arquivo.js"></script>
+  </body>
+</html>
